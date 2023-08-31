@@ -17,10 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="text-dark-text-color">
+    <html lang="en" className="text-dark-text-color bg-dark-bg-color">
       <body className="min-w-screen">
         <Navbar />
-        <main className="items-center h-full mt-16 bg-dark-bg-color">{children}</main>
+        <main className="items-center h-full mt-16 ">{children}</main>
         <FooterNav />
       </body>
     </html>

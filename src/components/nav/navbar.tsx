@@ -11,33 +11,47 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <nav
-      className="flex fixed justify-between p-4 top-0 items-center bg-dark-bg-color w-full"
-    >
-      <div className="w-full flex justify-between">
-        <Icon
-          height={25}
-          width={30}
-          onClick={handleClick}
-          image={hamburguerMenu}
-          alt="hamburguermenu"
-        />
-        <h2 className="italic font-black text-2xl text-dark-text-color">
-          TestCasino
-        </h2>
-        <Icon height={25} width={28} image={magnifierIcon} alt="closeicon" />
+    <nav className="flex fixed justify-between p-4 top-0 items-center bg-dark-bg-color w-full z-50">
+      <div className="w-full flex justify-between md:px-12">
+        <span className="lg:hidden">
+          <Icon
+            height={25}
+            width={30}
+            onClick={handleClick}
+            image={hamburguerMenu}
+            alt="hamburguermenu"
+          />
+        </span>
+        <div className="flex items-center gap-16">
+          <h2 className="italic font-black text-2xl text-dark-text-color">
+            TestCasino
+          </h2>
+          <ul className="hidden lg:flex gap-6">
+            <Link href="/">
+              <li>Home</li>
+            </Link>
+            <Link href="/livecasino">
+              <li>Features</li>
+            </Link>
+            <Link href="/sportscasino">
+              <li>Products</li>
+            </Link>
+          </ul>
+        </div>
+        <div className="flex gap-4 h-[40px] cursor-pointer">
+          <span className="flex p-2 rounded-lg md:bg-s-btn-color">
+            <Icon height={25} width={28} image={magnifierIcon} alt="search" />
+          </span>
+          <span className="hidden md:flex gap-4 ">
+            <button className="rounded-md bg-s-btn-color px-6 active:scale-95">
+              Login
+            </button>
+            <button className="rounded-md  bg-p-btn-color px-6 active:scale-95 whitespace-nowrap">
+              Join us
+            </button>
+          </span>
+        </div>
       </div>
-      <ul className="hidden  md:flex gap-6">
-        <Link href="/">
-          <li>Home</li>
-        </Link>
-        <Link href="/livecasino">
-          <li>Features</li>
-        </Link>
-        <Link href="/sportscasino">
-          <li>Products</li>
-        </Link>
-      </ul>
       <aside
         className={`${
           nav
@@ -69,14 +83,7 @@ const Navbar = () => {
                 <Link href="/sportscasino">Sports Casino</Link>
               </li>
             </ul>
-            <div className="flex flex-col w-full h-32 gap-4">
-              {/* <button className="rounded-md text-lg font-semibold bg-p-btn-color w-full p-3">
-                Join us
-              </button>
-              <button className="rounded-md text-lg font-semibold bg-[#262C42] w-full p-3">
-                Login
-              </button> */}
-            </div>
+            <div className="flex flex-col w-full h-32 gap-4"></div>
           </div>
         </div>
         <div className="w-1/3 h-full bg-dark-bg-color opacity-75"></div>

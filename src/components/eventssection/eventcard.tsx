@@ -11,11 +11,12 @@ type EventCardProps = {
 
 const EventCard = ({ title, description, img, price }: EventCardProps) => {
   return (
-    <div className="rounded-xl">
+    <div className="md:w-1/2 md:h-full">
       <Image
         src={img}
         alt="event-image"
         style={{
+          width:"100%",
           borderTopRightRadius: "0.75rem",
           borderTopLeftRadius: "0.75rem",
         }}
@@ -26,7 +27,7 @@ const EventCard = ({ title, description, img, price }: EventCardProps) => {
           <h2 className="text-3xl">${price}</h2>
           <p className=" text-md">{description}</p>
         </div>
-        <button className="w-full rounded-lg bg-p-btn-color p-4">
+        <button className="w-full rounded-lg bg-p-btn-color p-4 active:scale-95">
           View Details
         </button>
       </div>
