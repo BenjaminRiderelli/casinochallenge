@@ -18,12 +18,10 @@ type ImageSliderProps = {
 const ImageSlider = ({ images, title }: ImageSliderProps) => {
   const [curr, setCurr] = useState(0);
 
-  const prev = () => setCurr((curr) => curr - 1);
-  const next = () => {
-    //this should have a "page implementation" to be fully functional, the carousel
-    //shoulp pick up the amount of pictures to display and turn the page acordingly.
-    setCurr((curr) => curr + 1);
-  };
+  const prev = () =>
+    setCurr((curr) => (curr === 0 ? 1 : 0));
+  const next = () =>
+    setCurr((curr) => (curr === 1 ? 0 : 1));
 
   return (
     <div className="flex flex-col gap-4">
@@ -35,14 +33,14 @@ const ImageSlider = ({ images, title }: ImageSliderProps) => {
           </h3>
           <div className="flex gap-2">
             <button
-              disabled={curr === 0}
+              // disabled={curr === 0}
               onClick={prev}
               className="hidden md:block  border w-[25px] rounded-full active:scale-95 active:bg-p-btn-color"
             >
               {"<"}
             </button>
             <button
-              disabled={curr >= 1}
+              // disabled={curr >= 1}
               onClick={next}
               className="hidden md:block border w-[25px] rounded-full active:scale-95 active:bg-p-btn-color"
             >
