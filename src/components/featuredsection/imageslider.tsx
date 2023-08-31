@@ -51,10 +51,6 @@ const ImageSlider = ({ images, title }: ImageSliderProps) => {
           </div>
         </div>
       </div>
-      {/* <div
-        style={{ transform: `translateX(-${curr * 100}%)` }}
-        className="flex gap-4 md:h-[200px] w-full overflow-x-scroll md:overflow-hidden relative"
-      > */}
       <div className="overflow-x-scroll md:overflow-hidden no-scrollbar">
         <div
           className="flex w-full transition-transform ease-out duration-500 gap-4 "
