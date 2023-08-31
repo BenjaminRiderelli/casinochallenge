@@ -23,7 +23,7 @@ const FooterSection = () => {
   });
 
   return (
-    <footer className="flex flex-col md:flex-row gap-8 px-8 mb-24 pb-8 h-screen md:h-full">
+    <footer className="flex flex-col md:flex-row gap-8 px-8 py-8 md:py-0 mb-20 md:mb-0 pb-8 min-h-screen md:min-h-full bg-s-btn-color">
       <div className="flex justify-around gap-4 h-10 md:hidden">
         {footerImagesElements}
       </div>

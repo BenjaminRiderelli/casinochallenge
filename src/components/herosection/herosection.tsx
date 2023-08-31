@@ -26,7 +26,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="flex flex-col justify-between md:justify-start pt-8 md:pt-0 min-h-[calc(100vh-10rem)] md:min-h-[70vh] ">
+    <section className="flex flex-col justify-between md:justify-start pt-8 md:pt-0 min-h-[calc(100vh-10rem)] md:min-h-full ">
       <div className="flex flex-col md:flex-row justify-between items-center md:items-end px-10 min-h-full pt-4 md:pt-0 md:h-[calc(55vh)] md:px-12  lg:px-32 bg-[url('https://res.cloudinary.com/djcaqznth/image/upload/v1693423019/herobanner_vipogi.png')] bg-cover">
         <div className="flex flex-col items-center md:items-start md:justify-center md:h-full gap-8 md:w-2/5 ">
           <h3 className="text-2xl">The crypto thrill!</h3>

@@ -11,7 +11,7 @@ const FeaturedSection = () => {
   const shuffledImageArray2 = [ ...imageArray2, ...imageArray,]
 
   return (
-    <section className="flex flex-col justify-center px-4 gap-8 min-h-[calc(100vh-5rem)] bg-dark-bg-color md:px-32 ">
+    <section className="flex flex-col justify-center px-4 gap-8 min-h-[calc(100vh-5rem)] bg-dark-bg-color md:px-32">
       <ImageSlider title="Popular" images={shuffledImageArray} />
       <ImageSlider title="New games" images={shuffledImageArray2} />
       <ImageSlider title="Mega ways" images={shuffledImageArray} />
